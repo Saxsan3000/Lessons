@@ -1,45 +1,68 @@
 public class Main {
     public static void main(String[] args) {
-
         // Task 1
-        for (int i = 1; i < 11; i++) {System.out.println(i);}
+        int age = 17;
+
+        if (age >= 18)
+        {System.out.println("Если возраст человека равен " + age + ", то он совершеннолетний");}
+        else
+        {System.out.println("Если возраст человека равен "+ age + ", то он не достиг совершеннолетия, нужно немного подождать");
+        }
 
         // Task 2
-        for (int i = 10; i > 0; i--) {System.out.println(i);}
+        byte temperature = 5; //// Не выведет ни одного из значений
+        // если температура воздуха выше 5 градусов
+        if (temperature > 5) {System.out.println("На улице " + temperature + " градусов, можно идти без шапки");}
+        // если температура ниже 5 градусов
+        if (temperature <= 5) {System.out.println("На улице " + temperature + " градусов, нужно надеть шапку");}
 
         // Task 3
-        for (int i = 0; i < 17; i = i + 2) {System.out.println(i);}
+        byte speed = 60;
+        // скорость превышена, если она больше 60 км/ч
+        if (speed > 60) {System.out.println("Если скорость " + speed + ", то придется заплатить штраф");}
+        // превышения скорости нет, если она меньше 60 км/ч
+        if (speed <= 60) {System.out.println("На улице " + speed + " градусов, то можно ехать спокойно");}
 
         // Task 4
-        for (int i = 10; i > -11; i--) {System.out.println(i);}
-
+        age = 1;
+        if (age < 2) {System.out.println("Если возраст человека равен " + age + " то ему нужно быть с матерью :)");}
+        if (age >= 2 && age <= 6) {System.out.println("Если возраст человека равен " + age + " то ему нужно ходить в детский сад.");}
+        if (age >= 7 && age <= 17) {System.out.println("Если возраст человека равен " + age + " то ему нужно ходить в школу.");}
+        if (age >= 18 && age <= 24) {System.out.println("Если возраст человека равен " + age + " то ему нужно ходить в университет.");}
+        if (age >= 25) {System.out.println("Если возраст человека равен " + age + " то ему нужно ходить на работу.");}
         // Task 5
-        for (int i = 1904; i < 2100; i = i + 4) {System.out.println(i + " год является високосным");}
-
+        age = 3;
+        if (age >= 14)
+        {System.out.println("Если возраст ребенка равен " + age + " то ему можно кататься без сопровождения взрослых.");}
+        else {
+            if (age >= 5 && age < 14) {
+                System.out.println("Если возраст ребенка равен " + age + " то ему можно кататься в сопровождении взрослых.");}
+            else
+            {System.out.println("Если возраст ребенка равен " + age + " то ему нельзя кататься.");}
+        }
         // Task 6
-        for (int i = 1; i < 15; i++) {System.out.println(i * 7);}
+        byte sit = 102;
+        byte sitting = 60;
+        byte sittingBusy = 30;
+        byte standing = (byte) (sit - sitting);
+        byte standingBusy = 15;
+        if (sittingBusy + standingBusy >= sit)
+        {System.out.println("Вагон полон");}
+        else
+        {System.out.println("В вагоне свободно " + (sitting - sittingBusy) + " сидячих и " + (standing - standingBusy) + " стоячих мест");}
 
         // Task 7
-        for (int i = 0; i < 10; i++) {System.out.println((int) Math.pow(2,i));}
+        int one = 1000;
+        int two = 5500;
+        int three = 3765;
 
-        // Task 8
-        int summ = 0;
-        int deposit = 29000;
-        for (int i =1; i < 13; i++) {
-            summ = summ + deposit;
-            System.out.println("Месяц " + i + ": сумма накоплений равна " + summ + " рублей");
+        if (one > two && one > three)
+        {System.out.println(one + " больше");}
+        else
+        {if (two > three)
+        {System.out.println(two + " больше");}
+        else
+        {System.out.println(three + " больше");}
         }
-
-        // Task 9
-        double summ2 = 0d;
-        for (int i =1; i < 13; i++) {
-            summ2 = summ2 + deposit;
-            summ2 = summ2 + (summ2 * 0.01);
-            System.out.println("Месяц " + i + ": сумма накоплений равна " + summ2 + " рублей");
-        }
-
-        // Task 10
-        for (int i = 1; i < 11; i++) {System.out.println("2*" + i + "=" + 2 * i);}
     }
-
 }
