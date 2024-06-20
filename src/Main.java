@@ -1,95 +1,45 @@
 public class Main {
     public static void main(String[] args) {
 
-        // Task 1-2
-        byte clientOS;
-        int clientDeviceYear = 2016;
-        clientOS = 0; // iOS
-        // clientOS = 1; // Android
-        if (clientDeviceYear > 2015) {
-            if (clientOS == 0) {
-                System.out.println("Установите версию приложения для iOS по ссылке");}
-            else if (clientOS == 1) {
-                System.out.println("Установите версию приложения для Android по ссылке");}
-            else {
-                System.out.println("Неизвестное устройство");}}
-        else
-        if (clientOS == 0) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");}
-        else if (clientOS == 1) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");}
-        else {
-            System.out.println("Неизвестное устройство");}
+        // Task 1
+        for (int i = 1; i < 11; i++) {System.out.println(i);}
+
+        // Task 2
+        for (int i = 10; i > 0; i--) {System.out.println(i);}
 
         // Task 3
-        int year = 1884;
-        int begin = year - 1584;
-        float hundredOne = (float) begin % 100;
-        float hundredFour = (float) begin % 400;
-        float four = (float) begin % 4;
-
-        if (year < begin)
-        {System.out.println("Год указан меньше ввода високосного года");}
-        else
-        {if (hundredFour == 0)
-        {System.out.println(year + " является високосным");}
-        else if ((hundredOne == 0) || (four != 0))
-        {System.out.println(year + " не является високосным");}
-        else
-            System.out.println(year + " является високосным");}
+        for (int i = 0; i < 17; i = i + 2) {System.out.println(i);}
 
         // Task 4
-        int days = 1;
-        int deliveryDistance = 95;
-        if (deliveryDistance >= 60) {days = days++;}
-        if (deliveryDistance <= 100) {days = days++;}
-        if (deliveryDistance > 100) {days = 0;}
-
-        if (days == 0) {System.out.println("Свыше 100км доставка не производится");}
-        else {System.out.println("На доставку потребуется " + days + " дней");}
+        for (int i = 10; i > -11; i--) {System.out.println(i);}
 
         // Task 5
-        byte monthNumber = 12;
-        switch (monthNumber) {
-            case 1:
-                System.out.println("Январь");
-                break;
-            case 2:
-                System.out.println("Февраль");
-                break;
-            case 3:
-                System.out.println("Март");
-                break;
-            case 4:
-                System.out.println("Апрель");
-                break;
-            case 5:
-                System.out.println("Май");
-                break;
-            case 6:
-                System.out.println("Июнь");
-                break;
-            case 7:
-                System.out.println("Июль");
-                break;
-            case 8:
-                System.out.println("Август");
-                break;
-            case 9:
-                System.out.println("Сентябрь");
-                break;
-            case 10:
-                System.out.println("Октябрь");
-                break;
-            case 11:
-                System.out.println("Ноябрь");
-                break;
-            case 12:
-                System.out.println("Декабрь");
-                break;
-            default:
-                System.out.println("Такого месяца не существует");
+        for (int i = 1904; i < 2100; i = i + 4) {System.out.println(i + " год является високосным");}
+
+        // Task 6
+        for (int i = 1; i < 15; i++) {System.out.println(i * 7);}
+
+        // Task 7
+        for (int i = 0; i < 10; i++) {System.out.println((int) Math.pow(2,i));}
+
+        // Task 8
+        int summ = 0;
+        int deposit = 29000;
+        for (int i =1; i < 13; i++) {
+            summ = summ + deposit;
+            System.out.println("Месяц " + i + ": сумма накоплений равна " + summ + " рублей");
         }
+
+        // Task 9
+        double summ2 = 0d;
+        for (int i =1; i < 13; i++) {
+            summ2 = summ2 + deposit;
+            summ2 = summ2 + (summ2 * 0.01);
+            System.out.println("Месяц " + i + ": сумма накоплений равна " + summ2 + " рублей");
+        }
+
+        // Task 10
+        for (int i = 1; i < 11; i++) {System.out.println("2*" + i + "=" + 2 * i);}
     }
 
 }
